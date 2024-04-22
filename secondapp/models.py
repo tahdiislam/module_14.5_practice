@@ -1,0 +1,38 @@
+from django.db import models
+
+# Create your models here.
+class Model_practice(models.Model):
+    id = models.AutoField(primary_key=True)
+    # big_auto_field = models.BigAutoField()
+    big_integer_field = models.BigIntegerField()
+    binary_field = models.BinaryField()
+    boolean_field = models.BooleanField(null=True, blank=True)
+    char_field = models.CharField(max_length=200)
+    # comma_separated_field = models.CharField(
+    #     validators=[comma_separated_field], max_length=200
+    # )
+    date_field = models.DateField()
+    date_time_field = models.DateTimeField()
+    decimal_field = models.DecimalField(max_digits=100, decimal_places=2)
+    duration_field = models.DurationField()
+    email_field = models.EmailField()
+    file_field = models.FileField(upload_to="templates/")
+    file_path_filed = models.FilePathField(path="templates/secondapp")
+    fload_field = models.FloatField()
+    # foreign_key = models.ForeignKey(othermode, on_delete=models.CASCADE)
+    generic_ip_address = models.GenericIPAddressField()
+    image_field = models.ImageField(upload_to="templates/")
+    integer_field = models.IntegerField()
+    json_field = models.JSONField()
+    # many_to_many_field = models.ManyToManyField()
+    # null_boolean_field = models.NullBooleanField()
+    # one_to_one_field = models.OneToOneField()
+    positive_big_integer_field = models.PositiveBigIntegerField()
+    positive_integer_field = models.PositiveIntegerField()
+    positive_integer_field = models.PositiveSmallIntegerField()
+    slug_field = models.SlugField()
+    small_integer = models.SmallIntegerField()
+    text_field = models.TextField()
+    time_field = models.TimeField()
+    url_field = models.URLField()
+    uuid_field = models.UUIDField()
